@@ -3,3 +3,5 @@ RUN curl -sL https://deb.nodesource.com/setup_10.x |  bash -
 RUN apt-get install -y nodejs
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata
 ENV TZ=Europe/Berlin
+RUN chmod -R 777 /usr/lib/node_modules/
+RUN npm install -g --unsafe-perm node-sass core-js core-js-pure date-fns
